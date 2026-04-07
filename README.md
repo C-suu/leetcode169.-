@@ -41,11 +41,11 @@
 ```python
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
-        votes = 0                                # 初始化票数（或者叫生命值）为 0
-        for num in nums:                         # 依次遍历数组中的每一个数字
-            if votes == 0: x = num               # 如果当前票数为 0，擂台为空，让当前数字成为新的候选人 x
-            votes += 1 if num == x else -1       # 如果当前数字是友军（等于 x），票数加 1；如果是敌军（不等于 x），票数减 1（同归于尽）
-        return x                                 # 遍历结束后，存活下来的候选人 x 就是多数元素
+        votes = 0                           # 初始化票数（或者叫生命值）为 0
+        for num in nums:                    # 依次遍历数组中的每一个数字
+            if votes == 0: x = num          # 如果当前票数为 0，擂台为空，让当前数字成为新的候选人 x
+            votes += 1 if num == x else -1  # 如果当前数字是友军（等于 x），票数加 1；如果是敌军（不等于 x），票数减 1（同归于尽）
+        return x                            # 遍历结束后，存活下来的候选人 x 就是多数元素
 ```
 
 -----
